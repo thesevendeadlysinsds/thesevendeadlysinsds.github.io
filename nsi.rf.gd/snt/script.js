@@ -96,7 +96,7 @@ function Cours1()
     document.getElementById('cours1').style.backgroundColor = 'orange';
 
     /* On met la première page directement sur le premier cours */
-    document.getElementById('source_iframe').src = "1_internet/1 - Internet et TCP IP.pdf";
+    document.getElementById('source_iframe').src = "1_Internet/1 - Internet et TCP IP.pdf";
 }
 
 /* 2_Le_Web */
