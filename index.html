@@ -31,31 +31,9 @@
             white-space: nowrap; /* Pour éviter que le texte soit sur plusieurs lignes */
             flex: 1 1 100%; /* S'assurer que chaque texte occupe une ligne en portrait */
         }
-
-        /* Quand l'écran est en mode portrait (hauteur > largeur) */
-        @media (orientation: portrait) {
-            body {
-                flex-direction: column;
-            }
-            h1 {
-                font-size: 30vw; /* Taille plus petite si plusieurs lignes */
-            }
-        }
-
-        /* Quand l'écran est en mode paysage (largeur > hauteur) */
-        @media (orientation: landscape) {
-            body {
-                flex-direction: row;
-            }
-            h1 {
-                font-size: 40vw; /* Grande taille en paysage */
-            }
-        }
     </style>
 </head>
 <body>
-    <h1>FE!N</h1>
-    <h1>FE!N</h1>
     <h1>FE!N</h1>
 </body>
 </html>
