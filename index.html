@@ -6,8 +6,8 @@
     <title>FE!N</title>
     <style>
         * {
-            margin: 1;
-            padding: 1;
+            margin: 0;
+            padding: 0;
             box-sizing: border-box;
         }
 
@@ -20,6 +20,7 @@
             background-color: #fff; /* Couleur de fond */
             color: #000; /* Couleur du texte */
             overflow: hidden;
+            flex-wrap: wrap;
         }
 
         h1 {
@@ -28,10 +29,33 @@
             letter-spacing: 0.05em; /* Espacement entre les lettres */
             text-transform: uppercase;
             white-space: nowrap; /* Pour éviter que le texte soit sur plusieurs lignes */
+            flex: 1 1 100%; /* S'assurer que chaque texte occupe une ligne en portrait */
+        }
+
+        /* Quand l'écran est en mode portrait (hauteur > largeur) */
+        @media (orientation: portrait) {
+            body {
+                flex-direction: column;
+            }
+            h1 {
+                font-size: 30vw; /* Taille plus petite si plusieurs lignes */
+            }
+        }
+
+        /* Quand l'écran est en mode paysage (largeur > hauteur) */
+        @media (orientation: landscape) {
+            body {
+                flex-direction: row;
+            }
+            h1 {
+                font-size: 40vw; /* Grande taille en paysage */
+            }
         }
     </style>
 </head>
 <body>
+    <h1>FE!N</h1>
+    <h1>FE!N</h1>
     <h1>FE!N</h1>
 </body>
 </html>
