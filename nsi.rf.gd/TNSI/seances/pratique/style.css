@@ -6,6 +6,7 @@ main {
     /*background-color: #1c1c1e;*/
     color: #fefefe;
     margin-left: 200px;
+    z-index: -99;
 }
 
 .sujet {
