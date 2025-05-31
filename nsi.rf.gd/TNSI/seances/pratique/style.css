@@ -1,8 +1,5 @@
-html {
+main {
     filter: invert(100%);
-}
-
-body {
     font-family: Calibri;
     margin: 10px;
     padding: 10px;
