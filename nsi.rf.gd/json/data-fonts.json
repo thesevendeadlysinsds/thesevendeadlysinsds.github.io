@@ -1,14 +1,14 @@
 {
     "BakaTaida": {
         "name": "BakaTaida",
-        "link": "bakataida.css"
+        "link": "https://thesevendeadlysinsds.github.io/nsi.rf.gd/TNSI/seances/pratique/bakataida.css"
     },
     "yunranofont": {
         "name": "yunranofont",
-        "link": "yunranofont.css"
+        "link": "https://thesevendeadlysinsds.github.io/nsi.rf.gd/TNSI/seances/pratique/yunranofont.css"
     },
     "default": {
         "name": "default",
-        "link": "style.css"
+        "link": "https://thesevendeadlysinsds.github.io/nsi.rf.gd/TNSI/seances/pratique/style.css"
     }
 }
