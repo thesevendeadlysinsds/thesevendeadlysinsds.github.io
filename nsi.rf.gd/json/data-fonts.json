@@ -1,1 +1,14 @@
-
+{
+    "BakaTaida": {
+        "name": "BakaTaida",
+        "link": "bakataida.css"
+    },
+    "yunranofont": {
+        "name": "yunranofont",
+        "link": "yunranofont.css"
+    },
+    "default": {
+        "name": "default",
+        "link": "style.css"
+    }
+}
