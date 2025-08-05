@@ -302,6 +302,14 @@
             text-align: center;
         }
         </style>
+	<script>
+	  window.addEventListener('load', function () {
+	    parent.postMessage(
+	      { height: document.body.scrollHeight },
+	      '*'
+	    );
+	  });
+	</script>
         <script>
         function NavMenu()
         {
@@ -1492,4 +1500,5 @@
 	body {
 		background-color: goldenrod;
 	}
+
 </style></body></html>
