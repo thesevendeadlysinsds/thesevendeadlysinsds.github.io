@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <link rel="stylesheet" href="../../css/style-cours.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 id="7 - Algorithmes sur les arbres binaires">7 - Algorithmes sur les arbres binaires</h2>
+        <p>
+            Il est conseillé de relire au moins une fois le 
+            <a href="https://pixees.fr/informatiquelycee/n_site/nsi_term_structDo_arbre.html" class="rappel">
+                cours consacré aux arbres
+            </a>.
+        </p>
+        <p>
+            Avant d'entrer dans le vif du sujet (les algorithmes), nous allons un peu approfondir la notion d'arbre binaire :
+            <br>
+	        À chaque noeud d'un arbre binaire, on associe une clé ("valeur" associée au noeud on peut aussi utiliser le terme "valeur" 
+            à la place de clé), un "sous-arbre gauche" et un "sous-arbre droit".
+            <br>
+            Soit l'arbre binaire suivant :
+        </p>
+        <img src="../img/arbre binaire 1.png">
+        <p>
+            Si on prend le noeud ayant pour clé A (le noeud racine de l'arbre) on a:
+            <ul>
+                <li>
+                    le sous-arbre gauche est composé du noeud ayant pour clé B, du noeud ayant pour clé C, du noeud ayant pour clé D 
+                    et du noeud ayant pour clé E
+                </li>
+                <li>
+                    le sous-arbre droit est composé du noeud ayant pour clé F, du noeud ayant pour clé G, du noeud ayant pour clé H, 
+                    du noeud ayant pour clé I et du noeud ayant pour clé J
+                </li>
+            </ul>
+        </p>
+        <img src="../img/arbre binaire 2.png">
+        <p>
+            Si on prend le noeud ayant pour clé B on a:
+            <ul>
+                <li>le sous-arbre gauche est composé du noeud ayant pour clé C et du noeud ayant pour clé E</li>
+                <li>le sous-arbre droit est uniquement composé du noeud ayant pour clé D</li>
+            </ul>
+        </p>
+        <p>Un arbre (ou un sous-arbre) vide est noté NIL (NIL est une abréviation du latin nihil qui veut dire "rien")</p>
+        <p>
+            si on prend le noeud ayant pour clé G on a:
+            <ul>
+                <li>le sous-arbre gauche est uniquement composé du noeud ayant pour clé I</li>
+                <li>le sous-arbre droit est vide (NIL)</li>
+            </ul>
+        </p>
+        <p>
+            Il faut bien avoir en tête qu'un sous-arbre (droite ou gauche) est un arbre (même s'il contient un seul noeud ou pas de 
+            noeud de tout (NIL)).
+        </p>
+        <p>Soit un arbre T: T.racine correspond au noeud racine de l'arbre T</p>
+        <p>
+            Soit un noeud x:
+            <ul>
+                <li>x.gauche correspond au sous-arbre gauche du noeud x</li>
+                <li>x.droit correspond au sous-arbre droit du noeud x</li>
+                <li>x.clé correspond à la clé du noeud x</li>
+            </ul>
+        </p>
+        <p>Il faut noter que si le noeud x est une feuille, x.gauche et x.droite sont des arbres vides (NIL)</p>
+        <h3>Fiche de révision:</h3>
+        <a class="rev" href="../pdf/2 - fiche_révision_algo_arbres.pdf" target="_blank">
+            Fiche de révision
+        </a>
+</body>
+</html>

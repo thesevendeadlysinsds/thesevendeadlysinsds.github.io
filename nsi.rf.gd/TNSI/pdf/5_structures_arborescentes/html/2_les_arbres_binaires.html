@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <link rel="stylesheet" href="../../css/style-cours.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 id="2 - Les arbres binaires">2 - Les arbres binaires</h2>
+        <div class="container">
+            <article>
+                <p>
+                    Les arbres binaires sont des cas particuliers d'arbre : l'arbre du tournoi de rugby et l'arbre "père,
+                    mère..." sont des arbres binaires, en revanche, l'arbre représentant la structure du système de fichier
+                    n'est pas un arbre binaire.
+                    <br/><br/>
+                    Dans un arbre binaire, on a au maximum 2 branches qui partent d'un élément (pour le système de fichiers,
+                    on a 7 branches qui partent de la racine : ce n'est donc pas un arbre binaire).
+                    <br/><br/>
+                    Dans la suite nous allons uniquement travailler sur les arbres binaires.
+                    <br/><br/>
+                    Soit l'arbre binaire ci-contre:
+                </p>
+            </article>
+            <aside>
+                <img src="../img/2 - arbre binaire.png" width="50%">
+            </aside>
+        </div>
+        <div>
+            Un peu de vocabulaire:
+            <br/>
+            <ul>
+                <li>Chaque élément de l'arbre est appelé noeud (par exemple : A, B, C, D,...,P et Q sont des noeuds)</li>
+                <li>Le noeud initial (A) est appelé noeud racine ou plus simplement racine</li>
+                <li>
+                    On dira que le noeud E et le noeud D sont les fils du noeud B. On dira que le noeud B est le père
+                    des noeuds E et D
+                </li>
+                <li>Dans un arbre binaire, un noeud possède au plus 2 fils</li>
+                <li>
+                    Un noeud n'ayant aucun fils est appelé feuille (exemples : D, H, N, O, J, K, L, P et Q sont des
+                    feuilles)
+                </li>
+                <li>
+                    À partir d'un noeud (qui n'est pas une feuille), on peut définir un sous-arbre gauche et un
+                    sous-arbre droite (exemple : à partir de C on va trouver un sous-arbre gauche composé des noeuds
+                    F, J et K et un sous-arbre droit composé des noeuds G, L, M, P et Q)
+                </li>
+                <li>On appelle arête le segment qui relie 2 noeuds.</li>
+                <li>On appelle taille d'un arbre le nombre de noeuds présents dans cet arbre</li>
+                <li>
+                    On appelle profondeur d'un nœud ou d'une feuille dans un arbre binaire le nombre de nœuds du chemin
+                    qui va de la racine à ce nœud. La racine d'un arbre est à une profondeur 1, et la profondeur d'un
+                    nœud est égale à la profondeur de son prédécesseur plus 1. Si un noeud est à une profondeur p, tous
+                    ses successeurs sont à une profondeur p+1. Exemples: profondeur de B = 2; profondeur de I = 4;
+                    profondeur de P = 5
+                    <br/>
+                    <b>ATTENTION: <em>on trouve aussi dans certains livres la profondeur de la racine égale à 0
+                    (on trouve alors : profondeur de B = 1 ; profondeur de I = 3 ; profondeur de P = 4).
+                    Les 2 définitions sont valables, il faut juste préciser si vous considérez que la profondeur de la
+                    racine est de 1 ou de 0.</em></b>
+                </li>
+                <li>
+                    On appelle hauteur d'un arbre la profondeur maximale des nœuds de l'arbre. Exemple : la profondeur
+                    de P = 5, c'est un des noeuds les plus profond, donc la hauteur de l'arbre est de 5.
+                    <br/>
+                    <b>ATTENTION: <em>comme on trouve 2 définitions pour la profondeur, on peut trouver 2 résultats
+                    différents pour la hauteur : si on considère la profondeur de la racine égale à 1, on aura bien une
+                    hauteur de 5, mais si l'on considère que la profondeur de la racine est de 0, on aura alors une
+                    hauteur de 4.</em></b>
+                </li>
+            </ul>
+            <p>Il est possible d'avoir des arbres binaires de même taille mais de "forme" très différente:</p>
+            <img src="../img/arbres formes différentes.png">
+            <p>
+                Sur le schéma ci-dessus l'arbre 1 est dit " filiforme" alors que l'arbre 2 est dit "complet" (on dira
+                qu'un arbre binaire est complet si tous les noeuds possèdent 2 fils et que toutes les feuilles se
+                situent à la même profondeur). On pourra aussi dire que l'arbre 1 est déséquilibré alors que l'arbre 2
+                est équilibré.
+                <br/>
+	            Si on prend un arbre filiforme de taille n, on peut dire que la hauteur de cet arbre est égale à n−1
+                (si on prend la définition de la hauteur d'un arbre où la racine a une profondeur 0)
+                <br/>
+	            Si on prend un arbre complet de taille n, on peut démontrer que la hauteur de cet arbre est égale à la
+                partie entière de log2(n) (on arrondit à l'entier immédiatement inférieur le log2(n)). 	Dans le cas de
+                l'arbre 2, nous avons log2(7)=2,8 donc en prenant la partie entière on a bien la hauteur de l'arbre 2
+                égale à 2.
+                <br/>
+	            Un arbre filiforme et un arbre complet étant deux cas extrêmes, on peut affirmer que pour un arbre
+                binaire quelconque :
+                <br/><br/>
+                ⌊log2(n)⌋ ≤ h ≤ n−1
+                <br/><br/>
+                avec n la taille de l'arbre et h la hauteur de l'arbre ⌊log2(n)⌋ permet de prendre la partie entière du
+                logarithme base 2 de n).
+                <br/>
+	            Python ne propose pas de façon native l'implémentation des arbres binaires. Mais nous aurons, plus tard,
+                l'occasion d'implémenter des arbres binaires en Python en utilisant un peu de programmation orientée
+                objet.
+                <br/>
+	            Nous aurons aussi très prochainement l'occasion d'étudier des algorithmes permettant de travailler sur
+                les arbres binaires.
+                <h3>Fiche de révision:</h3>
+                <a class="rev" href="../pdf/1 - fiche_révision_les arbres.pdf" target="_blank">
+                    Fiche de révision
+                </a>
+            </p>
+        </div>
+</body>
+</html>

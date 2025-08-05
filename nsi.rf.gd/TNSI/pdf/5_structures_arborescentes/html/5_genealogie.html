@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <link rel="stylesheet" href="../../css/style-cours.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 id="5 - Généalogie">5 - Généalogie</h2>
+        <h3>5.1 - Père, fils et frères</h3>
+        <ul>
+            <li>Un nœud x est le père d’un nœud y si y est un successeur de x.</li>
+            <li>Deux nœuds sont frères s’ils ont le même père.</li>
+        </ul>
+        <h4>Exemple 1:</h4>
+        <p>On donne ci-dessous quelques liens de parenté:</p>
+        <img src="../img/notions père fils et frères.png">
+        <h4>Remarques:</h4>
+        <ul>
+            <li>La racine est le seul nœud de l’arbre n’ayant pas de père.</li>
+            <li>Un nœud sans fils est appelé nœud externe ou feuille. Le nombre de feuilles d’un arbre A est noté nf(A).</li>
+            <li>Un nœud qui n’est pas une feuille est appelé nœud interne.</li>
+            <li>La racine peut être une feuille ou un nœud interne suivant les arbres </li>
+        </ul>
+        <h3>5.2 - Exercice</h3>
+        <p>Donner les feuilles et les nœuds internes de l’arbre de l’exemple 1.</p>
+        <h3>5.3 - Ancêtres, descendants et sous-arbres</h3>
+        <ul>
+            <li>On appelle ancêtres d’un nœud x tous les nœuds distincts de x trouvés sur le chemin simple allant de la racine à x.</li>
+            <li>Un nœud y est appelé descendant d’un nœud x si x est un ancêtre de y.</li>
+            <li>On appelle sous-arbre de racine x l’arbre induit par les descendants de x. </li>
+        </ul>
+        <h4>Exemple 2:</h4>
+        <p>Dans l’arbre de l’exemple 1</p>
+        <ul>
+            <li>r1 et n2 sont les ancêtres de n6, n5 et n6 sont les descendants de n2.</li>
+            <li>Le sous-arbre de racine n2 est l’arbre constitué des nœuds n2, n5 et n6.</li>
+        </ul>
+</body>
+</html>

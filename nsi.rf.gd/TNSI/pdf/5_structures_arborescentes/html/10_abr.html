@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <link rel="stylesheet" href="../../css/style-cours.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 id="10 - Arbres binaires de recherche">10 - Arbres binaires de recherche</h2>
+        <p>
+            Cette ressource s’intéresse à une classe particulière d’arbres binaires : les arbres binaires de recherche appelés 
+            également les ABR. Ceux-ci définissent des structures de données qui ont pour structure logique un arbre binaire et qui 
+            peuvent supporter des opérations courantes sur des ensembles dynamiques ; par exemple : rechercher, minimum, maximum, 
+            prédécesseur, successeur, ajouter, supprimer, etc. Ces arbres sont fondamentaux dans beaucoup de domaines : gestion des 
+            fichiers sur un disque dur, etc.
+        </p>
+        <h3>1 - Structure d’un ABR</h3>
+        <h4>1.1 - Attributs des noeuds</h4>
+        <p>
+            Un ABR étant un arbre binaire, on utilise pour ses nœuds les mêmes attributs que ceux vus dans la ressource 
+            «Arbres binaires»:
+            <ul>
+                <li>n.clé désigne la «valeur» contenue dans n</li>
+                <li>n.père désigne le père de n</li>
+                <li>n.gauche désigne le fils gauche de n</li>
+                <li>n.droite désigne le fils droit de n</li>
+            </ul>
+            On donne la valeur particulière null (None en Python) à un attribut lorsque celui-ci est vide.
+        </p>
+        <h4>1.2 - Propriétés des clés</h4>
+        <p>
+            Contrairement à un arbre binaire général, les clés d’un ABR doivent être comparables entre elles. Plus précisément, 
+            pour tout nœud et pour tout descendant de, alors:
+            <ul>
+                <li>si y est un nœud du sous-arbre gauche de x, alors y.clé ≤ x.clé</li>
+                <li>si y est un nœud du sous-arbre droit de x, alors y.clé ≤ x.clé</li>
+            </ul>
+        </p>
+        <h5>Remarque:</h5>
+        <p>Dans la suite, nous ne considérons que des clés numériques ou chaînes de caractères.</p>
+        <h5>Exemple:</h5>
+        <img src="../img/abr exemple 1.png">
+        <h3>2 - Affichage et recherche de clés dans un ABR</h3>
+        <p>
+            Affichage des clés par ordre croissant
+            <br>
+            On a plus généralement le théorème suivant:
+            <h5>Théorème 1:</h5>
+	        Un parcours en profondeur avec traitement d’un ABR renvoie les clés de l’ABR par ordre croissant.
+        </p>
+        <h4>2.1 - Recherche de la clé maximale</h4>
+        <p>
+            Pour rechercher une clé particulière dans un ABR, la méthode est extrêmement simple : il suffit de parcourir l’arbre 
+            depuis la racine jusqu’à la clé (ou une feuille si la clé n’existe pas) en branchant si nécessaire à chaque nœud en 
+            fonction de la valeur de la clé:
+            <ul>
+                <li>dans le sous-arbre gauche si clé < noeud.clé</li>
+                <li>dans le sous-arbre droit si clé > noeud.clé</li>
+            </ul>
+        </p>
+        <h4>2.2 - Recherche du successeur d’une clé</h4>
+        <p>
+            On souhaite déterminer le successeur d’un nœud dans l’ordre déterminé par un parcours infixé de l’arbre. 
+            Pour rendre l’algorithme très efficace, il faut réaliser cette recherche sans effectuer de comparaison entre les clés. 
+        </p>
+        <h3>3 - Ajout d’une clé dans un ABR</h3>
+        <p>
+            L’ajout d’une clé dans un ABR est une opération délicate. En effet, il faut modifier l’ensemble dynamique représenté 
+            par l’ABR tout en gardant une structure d’ABR. Il existe principalement deux méthodes d’insertion:
+            <ul>
+                <li>l’insertion aux feuilles : on modifie dans ce cas la hauteur de l’ABR</li>
+                <li>l’insertion à la racine : on modifie dans ce cas la structure même de l’ABR</li>
+            </ul>
+            L’insertion aux feuilles est bien sûr la méthode d’insertion la plus simple et c’est uniquement celle-ci que nous 
+            traitons ci-dessous.
+        </p>
+        <h5>Méthode:</h5>
+        <p>
+            Pour insérer un nœud aux feuilles d’un ABR, il suffit de partir de la racine de l’ABR, de parcourir un chemin descendant 
+            jusqu’à un attribut null en testant la valeur de la clé du nœud à insérer avec la valeur de la clé de chaque nœud rencontré 
+            sur le chemin, puis de remplacer l’attribut null par le nœud voulu. Ce nœud devient alors une feuille de l’ABR.
+        </p>
+        <h5>Exemple:</h5>
+        <p>
+            Dans l’exemple ci-dessous, la figure de gauche montre l’ABR initial et la figure de droite le nouvel ABR une fois que le 
+            nœud 14 a été inséré. Les nœuds en gris clair indiquent le chemin descendant de la racine vers la position où l’élément 
+            doit être inséré et la ligne en pointillés indique le lien qui a été ajouté à l’ABR pour insérer l’élément 14.
+        </p>
+        <img src="../img/ajout cle dans abr.png">
+        <h5>Pour continuer:</h5>
+        <a class="rev" href="https://www.lumni.fr/video/arbres-binaires-de-recherche#containerType=serie&containerSlug=la-maison-lumni-lycee" target="_blank">
+            Cours vidéo Lumni sur les ABR
+        </a>
+</body>
+</html>

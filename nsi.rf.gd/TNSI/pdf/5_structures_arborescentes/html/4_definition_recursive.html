@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <link rel="stylesheet" href="../../css/style-cours.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 id="4 - Définition récursive">4 - Définition récursive</h2>
+        <p>
+            Il est aussi important de bien noter que l'on peut aussi voir les arbres comme des structures récursives : 
+            les fils d'un noeud sont des arbres (sous-arbre gauche et un sous-arbre droite dans le cas d'un arbre binaire), 
+            ces arbres sont eux mêmes constitués d'arbres...
+        </p>
+        <p>
+            Il est souvent utile de voir un arbre (enraciné) comme une structure de données récursive :
+            <ul>
+                <li>cas de base : un nœud unique r est un arbre de racine r ;</li>
+                <li>
+                    récurrence : un arbre avec au moins deux nœuds est constitué d’une racine r et d’une suite de sous-arbres 
+                    A1,... Ak dont les racines r1,..., rk sont les successeurs de r.
+                </li>
+            </ul>
+        </p>
+        <h3>Exemple 1:</h3>
+        <p>
+            La figure suivante est un arbre de racine r constitué de trois sous-arbres A1, A2 et A3 dont les racines 
+            r1, r2 et r3 sont les successeurs de r. L’arbre A2 correspond au cas de base, car il est constitué d’un nœud unique. 
+            L’arbre A3 est constitué de deux sous-arbres possédant chacun un nœud unique (ce qui termine la description de A3).
+        </p>
+        <img src="../img/arbre recursif.PNG">
+        <h3>4.1 - Exercice</h3>
+        <p>Décrire récursivement l’arbre A1 de l’exemple 1.</p>
+</body>
+</html>

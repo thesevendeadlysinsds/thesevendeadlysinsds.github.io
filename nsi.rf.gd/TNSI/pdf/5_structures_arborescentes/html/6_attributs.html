@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <link rel="stylesheet" href="../../css/style-cours.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 id="6 - Attributs">6 - Attributs</h2>
+        <h3>6.1 - Implémentation</h3>
+        <p>
+            Puisqu’un arbre est un graphe particulier, on peut utiliser en Python une implémentation sous forme de dictionnaire 
+            où les clés sont les “valeurs” des différents nœuds et où les valeurs associées sont des listes regroupant les attributs 
+            nécessaires (père, fils, etc.). Pour certains types d’arbres, on utilise une implémentation plus pertinente fondée sur la 
+            définition récursive d’un arbre et utilisant la programmation objet (étude ultérieure). 
+        </p>
+        <p>Un nœud n d’un arbre possède différents attributs permettant de stocker diverses données.</p>
+        <p>On utilise principalement:</p>
+        <ul>
+            <li>n.clé pour désigner la “valeur” contenue dans n</li>
+            <li>n.père pour désigner le père de n</li>
+            <li>n.fils1 pour désigner un fils de n</li>
+            <li>n.fils2 pour désigner un deuxième fils de n</li>
+            <li>...</li>
+        </ul>
+        <p>
+            Il peut aussi être utile dans certains cas d’utiliser directement un tableau n.fils pour stocker tous les fils de n. 
+            Bien sûr, suivant ce que l’on désire stocker dans le nœud, d’autres attributs comme des couleurs peuvent être utilisés.
+        </p>
+        <h4>Remarque:</h4>
+        <p>Lorsqu’un attribut est vide, on lui attribue la valeur particulière null.</p>
+        <h3>6.2 - Exercice</h3>
+        <h4>Exercice:</h4>
+        <p>On considère l’arbre suivant:</p>
+        <img src="../img/arbre enraciné.png">
+        <p>Compléter les attributs suivants:</p>
+        <ul>
+            <li>r1.père = ...</li>
+            <li>n2.père = ...</li>
+            <li>n3.père = ...</li>
+            <li>r1.fils1 = ...</li>
+            <li>n5.père = ...</li>
+            <li>n2.fils2 = ...</li>
+            <li>n4.fils = ...</li>
+            <li>n7.fils = ...</li>
+        </ul>
+</body>
+</html>
