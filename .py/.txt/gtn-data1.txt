@@ -1,0 +1,6 @@
+facile 0 10
+Moyen 0 50
+Difficile 0 100
+Extrême 0 200
+Dément 0 500
+Gynécologue -10**100 10**100
